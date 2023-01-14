@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    --color-blue: #4472c4;
+    --color-blue-dark: #00538f;
+    --color-black: #404040;
+    --color-black-dark: #1d1d1d;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-margin-top: 10vh;
+}
+
+/* make the scrollbar dark */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-blue-dark);
+}
+
+
+body {
+    font-family: 'Sofia Sans', sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-blue);
+}
+
+#Logo {
+    color: var(--color-blue);
+    text-decoration: none;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        linear-gradient(to top, var(--color-blue), var(--color-blue));
+    background-size: 10% 1em, 0 0.15em;
+    background-position: 50% 100%, 50% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+#Logo:hover {
+    background-size: 0 1em, 75% 0.15em;
+}
+
+nav {
+    background-color: var(--color-black);
+    padding: 2vh 2vw;
+    box-shadow: 0px 10px 39px -3px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    /* fix the arrangement of the nav links */
+    width: 100%;
+
+}
+
+nav div {
+    float: right;
+    margin-right: 5vh;
+}
+
+.NavLink {
+    text-decoration: none;
+    color: var(--color-blue);
+    margin: 0 1vw;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        linear-gradient(to top, var(--color-blue), var(--color-blue));
+    background-size: 10% 1em, 0 0.15em;
+    background-position: 50% 100%, 50% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+.NavLink:hover,
+.NavLink:focus {
+    background-size: 0 1em, 75% 0.15em;
+}
+
+nav div ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 {
+    margin-top: 25vh;
+    font-size: 5rem;
+}
+
+header p {
+    font-size: 2rem;
+}
+
+header {
+    height: 80vh;
+    background-image: url(Images/Children.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Container {
+    width: 50vw;
+    margin-left: 32.5vh;
+    padding: 5vh;
+}
+
+#Container .content {
+    margin: 5vh;
+}
+
+hr {
+    border: var(--color-blue) 1px solid;
+    width: 50vw;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+h3:not(nav h3) {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+#StatsContainer {
+    /*width: 50vw;
+    margin-left: 32.5vh;
+    padding: 10vh 5vw;
+    columns: 2;
+    /* Vertical gap 
+    column-gap: 5vw;*/
+    /* make the children have 2 on each line */
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-gap: 5vw;
+    /* make the children have 2 on each line */
+
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 3vh;
+}
+
+#StatsContainer .Stats {
+    text-align: center;
+    /* Horizontal gap */
+    margin-bottom: 10vh;
+}
+
+#StatsContainer .Stats h3 {
+    font-size: 4rem;
+}
+
+#StatsContainers .Stats p {
+    font-size: 6rem;
+}
+
+#Source {
+    margin-bottom: 2vh;
+}
+
+#Charities a {
+    text-decoration: underline;
+    color: var(--color-blue);
+}
+
+#Charities li {
+    margin: 3vh 0;
+}
+
+#Charities h4 {
+    margin-bottom: 0.5vh;
+}
+
+li p,
+#Charities li a {
+    padding-left: 1vw;
+}
+
+footer {
+    background-color: var(--color-black-dark);
+    padding: 5vh 2vw;
+    color: var(--color-blue);
+}
+
+@media screen and (max-width: 1500px) {
+    #StatsContainer {
+        grid-template-columns: repeat(1, 0.5fr);
+    }
+
+    /* make all the elements center and decrease their font size */
+    #Container {
+        width: 96vw;
+        margin-left: 0;
+        padding: 5vh 2vw;
+    }
+
+    #Container .content {
+        margin: 5vh 0;
+    }
+
+    h1 {
+        padding-top: 10vh;
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.5rem;
+    }
+
+    header {
+        height: 50vh;
+    }
+
+    hr {
+        width: 100vw;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h3:not(nav h3) {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    #StatsContainer {
+        display: block;
+    }
+
+    #StatsContainer .Stats {
+        text-align: center;
+        /* Horizontal gap */
+        margin-bottom: 10vh;
+    }
+
+    #StatsContainer .Stats h3 {
+        font-size: 2rem;
+    }
+
+    #StatsContainers .Stats p {
+        font-size: 3rem;
+    }
+
+    ol li h4 {
+        margin-top: 2vh;
+    }
+
+    #Charities a {
+        text-decoration: underline;
+        color: var(--color-blue);
+    }
+
+    #Charities li {
+        margin: 3vh 0;
+    }
+
+    #Charities h4 {
+        margin-bottom: 0.5vh;
+    }
+
+    li p,
+    #Charities li a {
+        padding-left: 1vw;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    /* Remove the #Logo and center the nav links */
+    #Logo {
+        display: none;
+    }
+
+    nav div {
+        float: none;
+        margin-right: 0;
+    }
+
+    nav div ul {
+        justify-content: center;
+    }
+
+    /* Increase spacing between the nav links */
+    .NavLink {
+        margin: 0 2vw;
+    }
+}
