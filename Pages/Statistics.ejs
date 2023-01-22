@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child Poverty Action</title>
+    <link rel="stylesheet" href="css.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <%- include('Partials/nav.ejs') %>
+      <center>
+        <h1>Child poverty stats</h1>
+        <p>Stats and statistics about child poverty in the UK</p>
+      </center>
+    </header>
+    <div id="Container">
+      <center>
+        <h2>Child poverty statistics</h2>
+      </center>
+      <div id="StatsContainer">
+        <div class="Stats">
+          <h3>3.9 Million</h3>
+          <p>Live in poverty in the UK</p>
+        </div>
+        <div class="Stats">
+          <h3>49%</h3>
+          <p>of children in one parent families are in poverty</p>
+        </div>
+        <div class="Stats">
+          <h3>47%</h3>
+          <p>
+            of children in families with more than 3 children life in poverty
+          </p>
+        </div>
+        <div class="Stats">
+          <h3>75%</h3>
+          <p>of families in poverty have at least one working parent</p>
+        </div>
+        <div class="Stats">
+          <h3>46%</h3>
+          <p>
+            of children from black and minority ethnic groups are in poverty
+          </p>
+        </div>
+        <div class="Stats">
+          <h3>47%</h3>
+          <p>of families with 3 or more children are in poverty</p>
+        </div>
+        <p id="Source">
+          <span style="font-weight: 700">Source: </span
+          ><a
+            style="text-decoration: underline; color: inherit"
+            href="https://cpag.org.uk"
+            >Child poverty action group</a
+          >
+        </p>
+      </div>
+    </div>
+    <%- include('Partials/footer.ejs') %>
+  </body>
+</html>
