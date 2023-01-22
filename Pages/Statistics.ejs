@@ -18,8 +18,10 @@
     <header>
       <%- include('Partials/nav.ejs') %>
       <center>
-        <h1>Child poverty stats</h1>
-        <p>Stats and statistics about child poverty in the UK</p>
+        <div>
+          <h1>Child Poverty Statistics</h1>
+          <p>Stats and statistics about child poverty in the UK</p>
+        </div>
       </center>
     </header>
     <div id="Container">
@@ -52,18 +54,21 @@
           </p>
         </div>
         <div class="Stats">
-          <h3>47%</h3>
-          <p>of families with 3 or more children are in poverty</p>
+          <h3>600,000 Less</h3>
+          <p>
+            children in poverty due to the government making tackling child
+            poverty a priority
+          </p>
         </div>
-        <p id="Source">
-          <span style="font-weight: 700">Source: </span
-          ><a
-            style="text-decoration: underline; color: inherit"
-            href="https://cpag.org.uk"
-            >Child poverty action group</a
-          >
-        </p>
       </div>
+      <p id="Source">
+        <span style="font-weight: 700">Source: </span
+        ><a
+          style="text-decoration: underline; color: inherit"
+          href="https://cpag.org.uk"
+          >Child poverty action group</a
+        >
+      </p>
     </div>
     <%- include('Partials/footer.ejs') %>
   </body>
