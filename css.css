@@ -106,7 +106,7 @@ header {
 
 header>center>div {
     margin: 25vh 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(64, 64, 64, 0.95);
     padding: 5vh 2vw;
     width: fit-content;
     height: fit-content;
